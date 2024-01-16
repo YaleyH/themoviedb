@@ -12,9 +12,7 @@ class _MainScreenWidgetState extends State<MainScreenWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TMDB', style: TextStyle(
-          color: Colors.white
-        ),),
+        title: Text('TMDB'),
         centerTitle: true,
       ),
     );
