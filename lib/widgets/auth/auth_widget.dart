@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:themoviedb/Theme/app_button_style.dart';
+import 'package:themoviedb/widgets/main_screen/main_screen_widget.dart';
 
 class AuthWidget extends StatefulWidget {
   const AuthWidget({super.key});
@@ -15,10 +16,7 @@ class _AuthWidgetState extends State<AuthWidget> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          'Login to youe account',
-          style: TextStyle(
-            color: Colors.white,
-          ),
+          'Login to your account',
         ),
       ),
       body: ListView(
@@ -86,6 +84,7 @@ class _FormWidgetState extends State<_FormWidget> {
     final login = _loginTextConroller.text;
     final password = _passwordTextController.text;
     if (login == 'admin' && password == 'admin') {
+      Navigator.of(context).pushReplacementNamed('/main_screen');
       _errorText = null;
     } else {
       _errorText = 'Не верный логин или пароль';
